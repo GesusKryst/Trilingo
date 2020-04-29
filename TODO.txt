@@ -1,0 +1,2 @@
+1) Add symbol for M:N relation between Account and AccountLevel
+2) Weak entity TOWN must hold foreign keys for both parent entities
