@@ -16,7 +16,6 @@ CREATE TABLE aState (
 CREATE TABLE town (
     TownID CHAR(4) NOT NULL,
     TownName VARCHAR(25) NOT NULL,
-    -- Foreign Keys
     StateID CHAR(4) NOT NULL,
     CountryID CHAR(4) NOT NULL,
     PRIMARY KEY (TownID),
@@ -53,7 +52,6 @@ CREATE TABLE account(
     YearJoined INT NOT NULL,
     Email VARCHAR(50) NOT NULL,
     TimeOnPlatform INT,
-    -- Foreign Key
     AccountLevel CHAR(4) NOT NULL,
     PRIMARY KEY (AccID),
     FOREIGN KEY (AccountLevel) REFERENCES accountLevel(LevelID)
@@ -64,7 +62,6 @@ CREATE TABLE person(
     PersonID CHAR(4) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     SkillLevel INT NOT NULL,
-    -- Foreign Keys
     TownID CHAR(4) NOT NULL,
     TeachesPersonID CHAR(4),
     MeetingID CHAR(4) NOT NULL,
