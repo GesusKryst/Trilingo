@@ -1,32 +1,18 @@
-/*
-Country
-- CountryID = Primary
-- CountryName
-*/
+
 CREATE TABLE country (
     CountryID CHAR(4) NOT NULL,
     CountryName VARCHAR(25) NOT NULL,
     PRIMARY KEY (CountryID)
 );
 
-/*
-State
-- StateID = Primary
-- StateName
-*/
+
 CREATE TABLE aState (
     StateID CHAR(4) NOT NULL,
     StateName VARCHAR(25) NOT NULL,
     PRIMARY KEY (StateID)
 );
 
-/*
-Town
-- TownID = Primary
-- TownName
-> Located in Country
-> Located in State
-*/
+
 CREATE TABLE town (
     TownID CHAR(4) NOT NULL,
     TownName VARCHAR(25) NOT NULL,
@@ -38,12 +24,7 @@ CREATE TABLE town (
     FOREIGN KEY (CountryID) REFERENCES country(CountryID)
 );
 
-/*
-MeetingSchedule
-- MeetID = Primary
-- MeetingLoc
-- Date
-*/
+
 CREATE TABLE meetingSchedule (
     MeetID CHAR(4) NOT NULL,
     MeetingLoc VARCHAR(50) NOT NULL,
@@ -51,12 +32,7 @@ CREATE TABLE meetingSchedule (
     PRIMARY KEY (MeetID)
 );
 
-/*
-Language
-- LangID = Primary
-- LangName
-- Category
-*/
+
 CREATE TABLE aLanguage(
     LanguageID CHAR(4) NOT NULL,
     LanguageName VARCHAR(25) NOT NULL,
@@ -64,25 +40,14 @@ CREATE TABLE aLanguage(
     PRIMARY KEY (LanguageID)
 );
 
-/*
-AccountLevel
-- LevelID = Primary
-- LevelName
-*/
+
 CREATE TABLE accountLevel(
     LevelID CHAR(4) NOT NULL,
     LevelName VARCHAR(25) NOT NULL,
     PRIMARY KEY (LevelID)
 );
 
-/*
-Account
-- AccID = Primary
-- YearJoined
-- Email
-- TimeOnPlatform (O)
-> Is of Account Level
-*/
+
 CREATE TABLE account(
     AccID INT NOT NULL,
     YearJoined INT NOT NULL,
@@ -95,17 +60,6 @@ CREATE TABLE account(
 );
 
 
-/*
-Person
-- PersonID = Primary
-- Email
-- SkillLevel
-> Lives in Town
-> Teaches Person
-> Has Meetings
-> Speaks Language
-> Owns Account
-*/
 CREATE TABLE person(
     PersonID CHAR(4) NOT NULL,
     Email VARCHAR(50) NOT NULL,
