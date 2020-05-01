@@ -60,6 +60,7 @@ CREATE TABLE account(
 
 CREATE TABLE person(
     PersonID CHAR(4) NOT NULL,
+    PersonName VARCHAR(25) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     SkillLevel INT NOT NULL,
     TownID CHAR(4) NOT NULL,
@@ -116,6 +117,6 @@ INSERT INTO account VALUES ("AC02", 2015, "SoarAbove1962@hotmail.com", 75, "AL02
 INSERT INTO account VALUES ("AC03", 2017, "hahaYes@gmail.com", 100, "AL03" );
 
 -- Person Data
-INSERT INTO person VALUES ("P001", "JohnnyB@aol.com", 1, "T001", NULL, "M001", "L001", "AC01");
-INSERT INTO person VALUES ("P002", "SoarAbovie1962@hotmail.com", 2, "T002", "P001", "M002", "L002", "AC02");
-INSERT INTO person VALUES ("P003", "hahaYes@gmail.com", 3, "T003", NULL, "M003", "L003", "AC03");
+INSERT INTO person VALUES ("P001", "Johnny Bravo", "JohnnyB@aol.com", 1, "T001", NULL, "M001", "L001", "AC01");
+INSERT INTO person VALUES ("P002", "Steven Segal", "SoarAbovie1962@hotmail.com", 2, "T002", "P001", "M002", "L002", "AC02");
+INSERT INTO person VALUES ("P003", "Lenny Kravitz", "hahaYes@gmail.com", 3, "T003", NULL, "M003", "L003", "AC03");
