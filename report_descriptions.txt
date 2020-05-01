@@ -1,0 +1,19 @@
+Implementation Part 2: Descriptions of at least tow reports 
+for each of the two end-user groups identified in phase 1.
+
+
+Report 1 (Getting all relevant information about a user’s meeting if their meeting is this month):
+
+-	Get the Name of the Student, 
+the Name of their Teacher, 
+the Location of the Meeting, 
+and the Date of the Meeting for all meetings happening this month.
+
+
+Report 2 (Getting all account details about all users who have had an account for over a year):
+
+-	Get the Name of the Person, 
+the Name of their Town, 
+their Account level, 
+their Year joined, their Email, 
+and their Time on Platform where their Time on Platform is greater than a year. 
